@@ -1,0 +1,172 @@
+<?php
+$conn = mysqli_connect("localhost", "idkhs9", khs16419g!!);
+mysqli_select_db($conn, "idkhs9");
+$result = mysqli_query($conn, "SELECT * FROM class");
+?>
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="index.css" rel="stylesheet" type="text/css">
+	
+	<script>
+		function recommendup(){
+			return 1;
+		}
+	
+	</script>
+</head>
+<body>
+	
+	<div class="bluecolor"> </div>
+		<div class="container1">
+	
+	<header>
+		
+		<div class="head_nav">
+			<div class="tie">
+			 <ol>로그인</ol>
+			 <ol>서비스 소개 </ol>
+			 <ol>불편/개선 사항 보내기 </ol>	
+			</div>
+		</div>
+
+	<div class="logobanner">
+		<div class="logo">wonderclass</div>
+		<div class="sentence">강의에 순위를 매겨 빠르게 좋은 강의를 찾는 방법</div>
+		</div>
+		
+		<nav>
+			<div class="big_sort">
+		<div class="tie2">
+			
+			<div>대학교 </div>
+			<div>인터넷 강의 </div>
+			<div>고등학교 </div>
+			
+		</div>
+			</div>
+		</nav>
+		
+		<div class="university">
+			<div><a href=""></a>서경대학교 </div>
+			<div><a href=""></a>고려대 </div>
+			<div><a href=""></a>국민대학교 </div>
+			<div><a href=""></a>동덕여자대학교 </div>
+			<div><a href=""></a>성신여자대학교 </div>
+			<div><a href=""></a>한국열린사이버대학교(OCU) </div>
+			<div><a href=""></a>한국예술종합대학교 </div>
+			<div><a href=""></a>한성대학교</div>
+		
+		</div>
+	</header>
+	
+
+		<h2>순위정렬기준 선택 </h2>
+		<div class="department">
+			<div class="sort_box">
+			 
+					<div class="humanities">
+						<div class="sort_univ">인문대</div >
+						<div>국제비즈니스어학부/영어 </div>
+						<div>국제비즈니스어학부/일어 </div>
+						<div>국제비즈니스어학부/중어 </div>
+						<div>국제비즈니스어학부/노어 </div>
+						<div>국제비즈니스어학부/불어 </div>
+						<div>문학콘텐츠학부/문화콘텐츠 </div>
+						<div>문학콘텐츠학부/국어국문학 </div>
+						<div>문학콘텐츠학부/철학 </div>
+						<div>아동학과 </div>
+					</div>
+					<div class="social_science">
+						<div class="sort_univ">사회과학대학  </div>
+						<div>공공인적자원학부 </div>
+						<div>금융경제학과 </div>
+						<div>경영학부 </div>
+						<div>군사학과 </div>
+						<div>글로벌경영학과 </div>
+					</div>
+					<div class="science">
+						<div class="sort_univ">이공대학 </div>
+						<div>컴퓨터공학과 </div>
+						<div>컴퓨터과학과 </div>
+						<div>화학생명공학과 </div>
+						<div>토목건축공학과 </div>
+						<div>산업경영시스템공학과 </div>
+						<div>나노융합공학과 </div>
+						<div>도시공학과 </div>
+						<div>금융정보공학과 </div>
+					</div>
+					<div class="arts">
+	                    <div class="sort_univ">예술대학 </div>
+	                    <div>디자인학부 </div>
+	                    <div>음악학부 </div>
+	                    <div>뮤지컬학부 </div>
+	                    <div>실용음악학과 </div>
+	                    <div>무용예술학과/한국무용 </div>
+	                    <div>공연예술학부/연기 </div>
+	                    <div>공연예술학부/무대기술 </div>
+	                    <div>공연예술학부/모델연기 </div>
+	                    <div>공연예술학부/무대패션 </div>
+	                    <div>공연예술학부/영화영상학과 </div>			
+				</div>
+				<div class="beauty_arts">
+					<div class="sort_univ">미용예술대학 </div>
+					<div>헤어메이크업디자인학과 </div>
+					<div>뷰티테라피&메이크업학과 </div>
+				</div>
+				<div class="else">
+					<div class="sort_univ">인성교양대학 </div>
+				</div>
+			</div>
+			
+				<div class="모든과목"> </div>
+		</div>
+		<div class="container_rank">
+			
+				<div class="box_banner">
+			<div class="rank_banner">실시간으로 움직이는 순위 </div>
+			<div class="side_banner">지금 바로 강의순위 평가에 참여해보세요!</div>
+				</div>
+			<div class="rank">
+				
+				<div class="th">
+					<div class="th_rank">순위 </div>
+					<div class="th_object">과목명 </div>
+					<div class="th_professor">교수님 </div>
+				</div>
+				
+				<div class="line"></div>
+				
+				<div class="tr">
+				  <div class="tr_button">
+						<div>
+							<button class="up_button" onclick="recommendup()"><img class="button_recommed" src="images/button_recommend_up자산 6@216x.png" alt=""></button>
+						</div>
+						<div>
+							<button class="down_button"><img class="button_recommed" src="images/button_recommend_down자산 7@216x.png" alt=""></button>
+						</div>
+					</div>
+						 <?php
+    					while( $row = mysqli_fetch_assoc($result)){
+     					 echo '<li><a href="http://localhost/index.php?id='.$row['id'].'">'.$row['title'].'</a></li>'."\n";
+    }
+    ?>
+					<div class="tr_recommend">추천수</div>
+					<div class="tr_rank">순위 </div>
+					<div class="tr_object">회계원리 </div>
+					<div class="tr_professor">박용무</div>
+					<div class="detail">자세히 보기 </div>
+				
+				</div>
+			</div>
+        </div>	
+		
+		
+	
+	</div>
+			<footer>
+	</footer>
+</body>
+</html>

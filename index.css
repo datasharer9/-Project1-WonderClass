@@ -1,0 +1,329 @@
+/* CSS Document */
+
+@media screen and (max-width:640px){
+
+}
+
+@media screen and (min-width: 641px){
+
+
+	
+
+
+div {
+		font-family : 나눔고딕;
+		padding-left: 1em;
+	}
+
+.bluecolor {
+	width: 100%;
+	background-color: #0088ff;
+	height: 1em;
+	margin-top : 0px;
+	padding-top : 0px;
+	
+}
+
+body {
+	
+	padding : 0;
+	margin: 0;
+}
+
+.head_nav {
+	display: inline-block;
+	float: right;
+	width: 100%;
+
+}
+
+.logobanner div{
+	padding-top: 1em;
+	display: inline-block;
+}
+
+	.logo {
+  padding-left:
+  font-family : 나눔고딕;
+  font-weight : bold;
+  font-size : 40px;
+  color : #0088FF;
+  color : rgb(0, 136, 255);
+		
+}
+.sentence{
+	float: right;
+	font-family : 나눔고딕;
+  	font-size : 28px;
+  	color : #0088FF;
+  	color : rgb(0, 136, 255);
+	
+	
+}
+
+.tie{
+	display: inline;
+	float: right;
+}
+.tie ol{
+	display: inline;
+	}
+
+
+nav{
+	width: 100%;
+	
+}
+
+.big_sort{
+	width: 100%;
+	display: inline-block;
+}
+.big_sort div {
+display: inline;
+}
+
+.university{
+	width: 100%;
+	height: 10em;
+	border: 2px solid #0088FF;
+	margin-top: 1em;
+}
+.seokyeong {
+	
+	width: 250px;
+	height: 100px;
+}
+
+.ocu {
+	width: 250px;
+	height: 100px;
+}
+
+.korea {
+	width: 250px;
+	height: 100px;
+}
+
+.sungsin {
+	width: 250px;
+	height: 100px;
+}
+
+.kukmin {
+	width: 250px;
+	height: 100px;
+}
+
+.university div {
+	display: inline-block;
+	
+}
+
+
+.tie2 {
+	float: right;
+	margin-bottom: 1em;
+	margin-top: 3em
+	
+}
+
+.department {
+	border: 1px solid #0088FF;
+	
+}
+.humanities div {
+	display: inline-block;
+}
+
+.social_science div {
+	display: inline-block;
+}
+
+.science div {
+	display: inline-block;
+}
+
+.arts div {
+	display: inline-block;
+}
+
+.beauty_arts div {
+	display: inline-block;
+}
+
+.else div {
+	display: inline-block;
+}
+
+.humanities {
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+.social_science {
+		padding-bottom: 1em;
+}
+
+.science {
+		padding-bottom: 1em;
+}
+
+.arts {
+		padding-bottom: 1em;
+}
+
+.beauty_arts {
+		padding-bottom: 1em;
+}
+
+.else {
+		padding-bottom: 1em;
+}
+
+.sort_univ {
+	font-weight : bold;
+	color : rgb(0, 136, 255);
+}
+
+.button_recommed {
+	width: 1em;
+	height: 1em;
+	
+}
+
+.container1 {
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+.th div{
+	display: inline-block;
+	
+}
+
+.th_rank {
+	margin-left: 7em;
+	margin-right: 5em;
+}
+
+.th_object {
+	margin-right: 20em;
+}
+
+.tr div{
+	display: inline-block;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+.tr_button div {
+	margin-left: 0;
+	padding-left: 0;
+	height:1em;
+}
+
+.container_rank {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+.rank {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+
+.th {
+	padding-top: 2em
+}
+
+.rank_banner {
+	margin-top: 1em;
+font-weight : bold;
+  font-size : 32px;
+  color : #0088FF;
+  color : rgb(0, 136, 255);
+}
+.rank_banner div{
+	display: inline-block;
+	
+}
+
+.tr div {
+	
+	vertical-align: middle;
+	
+
+}
+.tr_button {
+	width : 2em;
+}
+
+.tr {
+	padding-top: 2em;
+}
+
+.tr_rank {
+	width: 8em;
+}
+
+
+.tr_recommend {
+	width: 5.3em;
+}
+
+.tr_object {
+	width: 23.8em;
+}
+
+.tr_professor {
+	width: 5em;
+}
+
+.line {
+	border: thin #0088FF solid;
+}
+
+footer {
+	margin-top: 3em;
+	border: solid #0088FF;
+	background-color: #0088FF;
+	width: 100%;
+	height: 10em; 
+		
+}
+
+	
+	
+
+.university div {
+	margin-bottom: 2em;
+	margin-top: 2em;
+}
+
+
+
+.up_button {
+		background-color:#FFFFFF;
+	border : none;
+	height : 0.5em;
+}
+
+.down_button {
+		background-color:#FFFFFF;
+	border : none;
+	height : 0.5em;
+}
+
+.side_banner {
+	font-weight : bold;
+	color : rgb(0, 136, 255);
+}
+
+
+
+.box_banner div{
+	display: inline-block;
+}
+}
