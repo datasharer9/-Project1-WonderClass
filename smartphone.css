@@ -1,0 +1,200 @@
+@charset "utf-8";
+/* CSS Document */
+
+header{
+	
+	height: 3em;
+	border-bottom: rgba(229,229,229,1.00) solid thin;
+}
+#header_top{
+	display: inline;
+	height: 20em;
+	
+}
+#logo_top{
+	
+	width : 7em;
+	float: left;
+}
+#search_top{
+	width: 8em;
+	border-bottom: solid thin rgba(231,231,231,1.00);
+	margin-right: 4em;
+	float: right;
+	height: 1.5em;
+}
+#reading_glasses{
+	width: 1em;
+}
+body {
+	height: 80em;
+}
+
+#menu {
+	position: absolute;
+	right : 1em;
+	width: 2em;
+	height: 2em;
+	float: right;
+}
+
+
+#school_name {
+	margin-bottom: 1em;
+	margin-top: 1em;
+}
+
+#filter_box {
+	border-bottom: rgba(204,204,204,1.00) solid thin;
+	border-top: thin rgba(204,204,204,1.00) solid;
+}
+
+#filter_box> ol {
+	display: inline-block;
+	margin: 0.1em;
+	padding: 0.5em;
+	min-width: 1em;
+
+}
+
+#search_bar2 {
+	border : thick solid rgba(0,136,255,1.00);
+	height: 2em;
+	width : 80%;
+	margin-top: 1em;
+	margin-left: 10%;
+}
+
+#reading_glasses2 {
+	height: 2em;
+	float: right
+}
+
+#search_sentence {
+	margin-left: 1em;
+	width: 10em;
+}
+
+#search_bar2>div {
+	display: inline;
+	vertical-align: center;
+	
+}
+
+#attribute-box>div {
+	display: inline-block;
+	margin: auto;
+	
+}
+
+#rank_box {
+	margin-top: 1em
+}
+
+#rank_attribute {
+	width: 30%;
+	text-align: center;
+	margin-left: 10%
+}
+
+#class_attribute {
+	width: 30%;
+	text-align: center;
+	margin-left: 20%;
+	
+	
+}
+
+#professor {
+	width: 30%;
+	text-align: center;
+	float: right;
+}
+
+#rank-box {
+	border-top: rgba(204,204,204,1.00) solid thin;
+	margin-top: 0.5em;
+	border-bottom: rgba(204,204,204,1.00) solid thin;
+	
+}
+
+#button-up {
+	height: 1em;
+	width: 1.5em;
+}
+
+#button-down {
+	height: 1em;
+	width: 1.5em;
+}
+
+#one-box {
+	margin-top: 0.5em;
+}
+
+#rank-box {
+	
+}
+
+#one-box > div {
+	display: inline-block;
+	vertical-align: middle;
+
+}
+
+#rank {
+	width: 2em;
+	text-align: center;
+}
+
+#buttons {
+	width: 10%
+}
+
+#recommendation {
+	width: 2em;
+	text-align: center;
+}
+
+#sandwitch{
+		width: 20%;
+	
+}
+#sandwitch>div{
+	margin: auto;
+	
+}
+
+#class-name {
+	width: 30%;
+	text-align: center;
+
+}
+
+#professor-name {
+	width: 30%;
+	text-align: center;
+	margin-left: 5%;
+	
+}
+
+
+
+footer > div {
+	margin: auto;
+	width: 30%;
+	text-align: center;
+}
+footer >p{
+	margin: auto;
+	display: inline-block;
+}
+
+footer {
+	height: 5em;
+	background: rgba(0,136,255,1.00)
+}
+
+footer {
+	
+}
