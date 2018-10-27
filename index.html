@@ -4,8 +4,8 @@
 
 header("Cache-Control: no-store, no-cache, must-revalidate");
 
-$conn = mysqli_connect("localhost", "idkhs9", "khs16419g!!");
-mysqli_select_db($conn, "idkhs9");
+$conn = mysqli_connect("localhost", "id", "passwd");
+mysqli_select_db($conn, "id");
 
 
 $result = mysqli_query($conn, "SELECT * FROM class_test ORDER BY recommend DESC LIMIT 100");
