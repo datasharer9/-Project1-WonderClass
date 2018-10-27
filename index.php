@@ -19,7 +19,7 @@ $row=mysqli_fetch_assoc($result);
 <head>
 	
 
-	<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+	<meta charset="utf-8">
 	
 	<link href="index.css" rel="stylesheet" type="text/css">
 	
@@ -31,26 +31,32 @@ $row=mysqli_fetch_assoc($result);
 <body>
 	
 		<script>
-		
+		//문자열을 매개변수로 보낼 수 없다는 것은 말도 되지 않는다.
 			
-		function upDown(primeNum, department, upDown, filter) {
-   		
-			
+				
+		function upDown(primeNum, className, filter) {
+   				
     	xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
                 document.getElementById("rank").innerHTML = this.responseText;
             }
         };
-        xmlhttp.open("POST","upDown.php",true); 
-		xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; charset=utf-8");
-        xmlhttp.send("department="+ department);
-		
-			//encodeURIComponent(department)
-		} //"primeNum="+ primeNum +"&department="+department + "&upDown="+upDown +"&filter=" +filter 
-		
-			// xml, json로 값을 보내는 것도 좋을 것 같다. 
-		
+						
+			var test = "primeNum="+primeNum+ "&className="+ className +"&filter="+filter;
+			
+		xmlhttp.open("POST","upDown.php",true); 
+		xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xmlhttp.send(test);
+		//encodeURIComponent text/html  + "&primeNum="+ primeNum
+			
+		} 
+			
+			//"primeNum="+ primeNum +"&department="+department + "&upDown="+upDown +"&filter=" +filter 
+		//정상 작동한다. 달라진 변수는 여러가지이다. 1. 큰따옴표에서 작은 따옴표 2. 매개변수를 직접 대입하지 않고 변수에 담아.서대입 
+		// post는 숫자만 보내진다. 
+			
+			//문자열이 안보내진다 // 다른 형태는 보내진다.
 		function upDown_department(primeNum, upDown) {
 		
    
@@ -110,7 +116,7 @@ $row=mysqli_fetch_assoc($result);
 		
 		<div class="head_nav">
 			<div class="tie">
-			 <ol>로그인</ol>
+			 <ol><a href="/membershipApplication.html">로그인 </a></ol>
 			 <ol>서비스 소개 </ol>
 			 <ol>불편/개선 사항 보내기 </ol>	
 			</div>
@@ -256,17 +262,19 @@ $row=mysqli_fetch_assoc($result);
 
 				
 				while($row=mysqli_fetch_assoc($result)){
-	
+				
+						//지금 저기에 문자열이 안 들어간다. 매개변수에 // 저것만 해결하면 되는
+					
 					echo '<tr class="line-rankbox">
 					
 	
 					<td class="tr-button">
 			
-					<button type="button" onclick="upDown('.$row['primeNum'].' , 'department' , 0, 0)">
+					<button type="button" name="className " value="'.$row['className'].' " onclick="upDown('.$row['primeNum'].', "example" , 0 )" >
 					<img class="recommend-button" src="images/button_recommend_up자산 6@216x.png" alt="추천 "> </button>
 					
-				
-					<button onclick="upDown('.$row['primeNum'].', 'department' , 1, 0)" ><img class="recommend-button" src="images/button_recommend_down자산 7@216x.png" alt="비추천 "></button>    
+				    
+					<button onclick= "upDown('.$row['primeNum'].', 1, 1)" ><img class="recommend-button" src="images/button_recommend_down자산 7@216x.png" alt="비추천 "></button>    
 					
 					</td>';
 								

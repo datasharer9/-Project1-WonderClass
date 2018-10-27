@@ -4,12 +4,19 @@
 
 header("Cache-Control: no-store, no-cache, must-revalidate");
 
-$conn = mysqli_connect("localhost", "idkhs9", "khs16419g!!");
-mysqli_select_db($conn, "idkhs9");
+$q =$_GET['searchClass'];
+	
+$con = mysqli_connect('localhost','idkhs9','khs16419g!!');
+if (!$con) {
+    die('Could not connect: ' . mysqli_error($con));
+}
 
-
-$result = mysqli_query($conn, "SELECT * FROM class_test ORDER BY recommend DESC LIMIT 100");
-$row=mysqli_fetch_assoc($result);
+mysqli_select_db($con,"idkhs9");
+$sql1= "SELECT * FROM class_test WHERE className LIKE '%".$q."%' OR professor LIKE '%".$q."%' LIMIT 100";
+//$sql1= "SELECT * FROM class_test WHERE match (className) against ('".$q."') OR match (professor) against ('".$q."') LIMIT 100";
+	
+$result = mysqli_query($con, $sql1); 
+	
 
 ?>
 
@@ -19,23 +26,13 @@ $row=mysqli_fetch_assoc($result);
 <head>
 	
 
-	<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
-	
+	<meta charset="utf-8">
 	<link href="index.css" rel="stylesheet" type="text/css">
 	
-
-
-	
-</head>
-	
-<body>
-	
-		<script>
-		
-			
-		function upDown(primeNum, department, upDown, filter) {
-   		
-			
+	<script>
+				
+		function upDown(primeNum, upDown) {
+   	
     	xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
@@ -43,13 +40,9 @@ $row=mysqli_fetch_assoc($result);
             }
         };
         xmlhttp.open("POST","upDown.php",true); 
-		xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; charset=utf-8");
-        xmlhttp.send("department="+ department);
-		
-			//encodeURIComponent(department)
-		} //"primeNum="+ primeNum +"&department="+department + "&upDown="+upDown +"&filter=" +filter 
-		
-			// xml, json로 값을 보내는 것도 좋을 것 같다. 
+		xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xmlhttp.send("primeNum="+ primeNum + "&upDown="+upDown );
+		}
 		
 		function upDown_department(primeNum, upDown) {
 		
@@ -64,7 +57,6 @@ $row=mysqli_fetch_assoc($result);
 		xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         xmlhttp.send("primeNum="+ primeNum + "&upDown="+upDown );
 		}
-		
 		
 		
 	function search_university() {
@@ -101,7 +93,11 @@ $row=mysqli_fetch_assoc($result);
 	}
 
 	</script>
+
 	
+</head>
+	
+<body>
 	
 	<div class="bluecolor"> </div>
 		<div class="container1">
@@ -207,7 +203,7 @@ $row=mysqli_fetch_assoc($result);
 					<div class="sort_univ">미용예술대학 </div>
 					<div onClick="department(20051)"><a href="#rank_banner">미용예술학과</a> </div>
 					<div onClick="department(20049)"><a href="#rank_banner">헤어메이크업디자인학과</a> </div>
-					<div onClick="department(20050)"><a href="#rank_banner">뷰티테라피메이크업학과</a> </div>
+					<div onClick="department(20050)"><a href="#rank_banner">뷰티테라피&메이크업학과</a> </div>
 					<div onClick="department(20052)"><a href="#rank_banner">미용예술학과_외국인유학생</a></div>
 				</div>
 				<div class="else">
@@ -256,17 +252,16 @@ $row=mysqli_fetch_assoc($result);
 
 				
 				while($row=mysqli_fetch_assoc($result)){
-	
+
 					echo '<tr class="line-rankbox">
 					
 	
 					<td class="tr-button">
-			
-					<button type="button" onclick="upDown('.$row['primeNum'].' , 'department' , 0, 0)">
-					<img class="recommend-button" src="images/button_recommend_up자산 6@216x.png" alt="추천 "> </button>
+				
+					<button type="submit" onclick="upDown('.$row[primeNum].' , 0)"><img class="recommend-button" src="images/button_recommend_up자산 6@216x.png" alt="추천 "> </button>
 					
 				
-					<button onclick="upDown('.$row['primeNum'].', 'department' , 1, 0)" ><img class="recommend-button" src="images/button_recommend_down자산 7@216x.png" alt="비추천 "></button>    
+					<button onclick="upDown('.$row[primeNum].' , 1)"><img class="recommend-button" src="images/button_recommend_down자산 7@216x.png" alt="비추천 "></button>    
 					
 					</td>';
 								

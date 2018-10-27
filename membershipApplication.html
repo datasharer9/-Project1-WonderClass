@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>무제 문서</title>
+	
+	<link href="membershipApplication.css" rel="stylesheet" type="text/css">
+	
+</head>
+
+<body>
+	<h1>회원가입 </h1>
+	
+	<div id="wrapper">
+		
+		<form action="membershipApplication.php" method="post">
+			
+			<fieldset>
+				<legend>step1 </legend>
+			<label for="id">아이디 </label><input type="text" id="id" placeholder="ID " maxlength="10" autofocus required>
+			<button>중복확인 </button>
+				<input type="hidden" id="idAgreement" name="idAgreement" value="Y">
+			<br><br>
+			
+			<label for="name">이름 </label><input type="text" id="name " placeholder="이름 " required>
+			<br><br>
+			
+			<label for="password">비밀번호 입력 </label><input type="password" id="password" placeholder="비밀번호 " maxlength="15" required>
+			
+			<br><br>
+			
+			<label for=" ">비밀번호 재확인 </label><input type="password" placeholder="비밀번호 확인 " maxlength="15" required>
+			<br><br>
+				
+				</fieldset>
+			
+			<fieldset>
+				<legend>step 2 </legend>
+			
+			<label for="birthDate">생년월일 </label><input type="number" class="birthDate"> <input type="number" class="birthDate"> <input type="number" class="birthDate">
+			<br><br>
+			
+			<label for="gender">성별 </label><input type="radio" class="gender" value="man"><input type="radio" class="gender" value="woman">
+			<br><br>
+			
+			<label for="email">이메일 주소 </label><input type="email" id="email" name="email" required>
+			<button>중복확인 </button>
+			<br><br>
+				
+				</fieldset>
+			<br>
+			
+			<label> 정보제공에 동의하십니까?<input type="checkbox"></label>
+			<br><br>
+			
+			<input type="submit" value="가입하기">
+			
+			
+					
+		</form>
+	
+	</div>
+	
+</body>
+</html>

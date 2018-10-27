@@ -1,0 +1,9 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+#wrapper {
+	border: rgba(0,136,255,1.00) solid medium;
+	padding: 1em;
+	width: 50%;
+}

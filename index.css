@@ -1,13 +1,6 @@
 /* CSS Document */
 
-@media screen and (max-width:640px){
 
-}
-
-@media screen and (min-width: 641px){
-
-
-	
 
 
 div {
@@ -37,14 +30,12 @@ body {
 
 }
 
-.logobanner div{
+.logobanner> div{
 	padding-top: 1em;
 	display: inline-block;
 }
 
-	.logo {
-  padding-left:
-  font-family : 나눔고딕;
+ .logo {
   font-weight : bold;
   font-size : 40px;
   color : #0088FF;
@@ -79,7 +70,7 @@ nav{
 	width: 100%;
 	display: inline-block;
 }
-.big_sort div {
+.big_sort> div {
 display: inline;
 }
 
@@ -100,6 +91,10 @@ display: inline;
 	height: 100px;
 }
 
+.td-detail{
+	font-size: small;
+	color: rgba(204,204,204,1.00);
+}
 .korea {
 	width: 250px;
 	height: 100px;
@@ -115,7 +110,7 @@ display: inline;
 	height: 100px;
 }
 
-.university div {
+.university> div {
 	display: inline-block;
 	
 }
@@ -128,37 +123,40 @@ display: inline;
 	
 }
 
-.department {
+.tie2>div {
+	display: inline-block;
+}
+.wrap_box {
 	border: 1px solid #0088FF;
 	
 }
-.humanities div {
+.college >div {
 	display: inline-block;
 }
 
-.social_science div {
+.social_science> div {
 	display: inline-block;
 }
 
-.science div {
+.science> div {
 	display: inline-block;
 }
 
-.arts div {
+.arts> div {
 	display: inline-block;
 }
 
-.beauty_arts div {
+.beauty_arts> div {
 	display: inline-block;
 }
 
-.else div {
+.else> div {
 	display: inline-block;
 }
 
-.humanities {
-	padding-top: 1em;
-	padding-bottom: 1em;
+.college {
+	margin-top: 1em;
+	margin-bottom: 1em;
 }
 
 .social_science {
@@ -186,15 +184,15 @@ display: inline;
 	color : rgb(0, 136, 255);
 }
 
-.button_recommed {
+.button_recommend {
 	width: 1em;
 	height: 1em;
 	
 }
 
 .container1 {
-	padding-left: 10%;
-	padding-right: 10%;
+	margin-left: 10%;
+	margin-right: 10%;
 }
 
 .th div{
@@ -203,7 +201,6 @@ display: inline;
 }
 
 .th_rank {
-	margin-left: 7em;
 	margin-right: 5em;
 }
 
@@ -238,17 +235,16 @@ display: inline;
 	padding-top: 2em
 }
 
-.rank_banner {
+#rank_banner {
+	text-align: center;
 	margin-top: 1em;
-font-weight : bold;
-  font-size : 32px;
-  color : #0088FF;
-  color : rgb(0, 136, 255);
+	margin-bottom: 1em;
+	font-weight : bold;
+  	font-size : 32px;
+  	color : #0088FF;
+  	color : rgb(0, 136, 255);
 }
-.rank_banner div{
-	display: inline-block;
-	
-}
+
 
 .tr div {
 	
@@ -269,9 +265,7 @@ font-weight : bold;
 }
 
 
-.tr_recommend {
-	width: 5.3em;
-}
+
 
 .tr_object {
 	width: 23.8em;
@@ -323,7 +317,169 @@ footer {
 
 
 
-.box_banner div{
+
+
+#reading-glasses {
+	width: 2em;
+}
+
+#search-box {
+	border: rgba(204,204,204,1.00) solid thick;
+	width: 40em;
+}
+
+#search-input {
+	width: 40em;
+	height: 2.5em;
+	font-size: 0.9em;
+	
+}
+
+#search-box>span {
+	vertical-align: middle;
 	display: inline-block;
 }
+
+#university-name 	{
+		margin-top: 1em;
+		font-size: 2em;	
+		margin-bottom: 1em;	
+}
+
+
+
+.recommend-button {
+	width: 1.5em;
+	display: block;
+	margin-bottom: 0.2em;
+	margin-top: 0.4em
+}
+
+.tr-button {
+	height: 5em;
+}
+
+.tr-button>button{
+	display: block;
+	background: transparent;
+	border: #fff;
+}
+.rank-line {
+	height: 4em;
+	width: 10em;
+	display: block;
+}
+
+#rank-table {
+	width: 100%;
+	table-layout: fixed;
+	height:auto;
+	display: block;
+}
+
+#rank {
+	margin-top: 2em;
+}
+
+tr{
+	border-bottom: rgba(204,204,204,1.00) solid thick;
+	border-collapse: collapse;
+}
+
+
+
+th {
+	border-bottom: rgba(0,0,0,1.00) solid thin;
+
+}
+
+#th-recommend{
+	width: 10%;
+}
+
+#th-rank {	
+	width: 10%;
+}
+
+#th-class {
+	text-align: left;
+	width: 40%;
+}
+
+#th-professor {
+	text-align: left;
+	width: 30%;
+}
+
+#th-grade {
+	text-align: left;
+	width: 10%
+}
+
+.td-recommend, .td-rank{
+	text-align: center;
+}
+.td-grade{
+	width: 10%;
+}
+table {
+	table-layout: fixed;
+}
+
+#search-class {
+	border: rgba(0,136,255,1.00) solid thick;
+	height: 5em;
+	width:30em;
+	
+
+	
+}
+
+
+
+#reading_glasses {
+	height: 5em;	
+
+}
+
+
+
+
+
+form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	width: 50%;
+
+}
+
+
+.dropdown_class {
+width: 50%;
+	display: inline-block;
+}
+
+.dropdown_professor {
+display: inline-block;
+	width: 40%;
+}
+
+#search_dropdown>div {
+	margin:0.2em;
+	margin-bottom: 1em;
+}
+
+#university_dropdown {
+
+}
+
+.total {
+	margin-top: 1em;
+}
+
+a {
+	text-decoration: none;
+	color: black;
 }
