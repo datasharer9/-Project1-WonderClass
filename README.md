@@ -1,5 +1,14 @@
 # wonderclass
 
+저의 첫 번째 프로젝트입니다.
+
+3학년 겨울방학과 4학년 여름방학을 이용해서 만들었습니다.
+
+- 웹 애플리케이션
+- html, js, php, mariaDB
+
+===========================
+
 I making a class-info-share site.
 
 I will store my soure file in this repository.
